@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="jnB-bJ-cV4">
-                                <rect key="frame" x="73.5" y="322.5" width="267.5" height="251.5"/>
+                                <rect key="frame" x="73.5" y="288.5" width="267.5" height="319.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtk-cJ-shS">
                                         <rect key="frame" x="0.0" y="0.0" width="267.5" height="32.5"/>
@@ -57,12 +57,15 @@
                                             <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yV-xg-Jcf"/>
                                         </connections>
                                     </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Ky-af-JsF">
+                                        <rect key="frame" x="0.0" y="288.5" width="267.5" height="32"/>
+                                        <segments>
+                                            <segment title="F to C"/>
+                                            <segment title="C to F"/>
+                                        </segments>
+                                    </segmentedControl>
                                 </subviews>
                             </stackView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhj-GU-wyR">
-                                <rect key="frame" x="183" y="603" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.87323092436159278" green="0.99004158805034315" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -73,8 +76,9 @@
                     </view>
                     <connections>
                         <outlet property="celsiusLabel" destination="Fra-ih-iCy" id="hCo-PF-Vur"/>
-                        <outlet property="degreesFahrenheit" destination="6d5-f0-2w5" id="T0Y-wx-SDL"/>
-                        <outlet property="switchButton" destination="Mhj-GU-wyR" id="rv6-rO-3Pa"/>
+                        <outlet property="degreesFOrC" destination="6d5-f0-2w5" id="Bs7-vm-RNd"/>
+                        <outlet property="fLabel" destination="bgx-E7-gNs" id="XD6-Hs-iWq"/>
+                        <outlet property="segmentedControl" destination="4Ky-af-JsF" id="p8J-NE-eV3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
