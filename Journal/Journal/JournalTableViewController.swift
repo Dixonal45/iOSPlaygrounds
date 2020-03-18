@@ -93,7 +93,7 @@ class JournalTableViewController: UITableViewController {
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let journalEntryViewController = segue.destination as? JournalEntryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell), let entry = journal.entry(index: indexPath.row) {
-            JournalEntryViewController.journalEntry = entry
+            journalEntryViewController.journalEntry = entry
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
