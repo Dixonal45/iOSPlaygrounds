@@ -16,6 +16,7 @@
 		3737E1E32411639E00BB67C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737E1E12411639E00BB67C5 /* LaunchScreen.storyboard */; };
 		3737E1EB2411652300BB67C5 /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737E1EA2411652300BB67C5 /* JournalTableViewController.swift */; };
 		373E24DA2416CAA400031BA4 /* JournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E24D92416CAA400031BA4 /* JournalEntryViewController.swift */; };
+		37A24F682423F38A00CD2D42 /* NewJournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A24F672423F38A00CD2D42 /* NewJournalEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3737E1E42411639E00BB67C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3737E1EA2411652300BB67C5 /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
 		373E24D92416CAA400031BA4 /* JournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryViewController.swift; sourceTree = "<group>"; };
+		37A24F672423F38A00CD2D42 /* NewJournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJournalEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3737E1D82411639D00BB67C5 /* SceneDelegate.swift */,
 				3737E1DC2411639D00BB67C5 /* Main.storyboard */,
 				373E24D92416CAA400031BA4 /* JournalEntryViewController.swift */,
+				37A24F672423F38A00CD2D42 /* NewJournalEntryViewController.swift */,
 				3737E1EA2411652300BB67C5 /* JournalTableViewController.swift */,
 				372AF0182412D3CF0011912A /* Journal.swift */,
 				372AF0162412CF7D0011912A /* Journal Entry.swift */,
@@ -152,6 +155,7 @@
 				373E24DA2416CAA400031BA4 /* JournalEntryViewController.swift in Sources */,
 				3737E1EB2411652300BB67C5 /* JournalTableViewController.swift in Sources */,
 				3737E1D92411639D00BB67C5 /* SceneDelegate.swift in Sources */,
+				37A24F682423F38A00CD2D42 /* NewJournalEntryViewController.swift in Sources */,
 				372AF0172412CF7D0011912A /* Journal Entry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

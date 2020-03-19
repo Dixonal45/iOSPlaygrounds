@@ -10,6 +10,7 @@ import UIKit
 
 class JournalTableViewController: UITableViewController {
     let cellReuseIdentifier = "JournalEntryCell"
+    let journalEntrySegueIndentifier = "journalEntry"
     var journal = Journal()
 
     override func viewDidLoad() {
@@ -92,12 +93,14 @@ class JournalTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let journalEntryViewController = segue.destination as? JournalEntryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell), let entry = journal.entry(index: indexPath.row) {
-            journalEntryViewController.journalEntry = entry
+        if segue.identifier == journalEntrySegueIndentifier {
+            if let journalEntryViewController = segue.destination as? JournalEntryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell), let entry = journal.entry(index: indexPath.row) {
+                    journalEntryViewController.journalEntry = entry
+        }
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
+        }
     
 
 }
