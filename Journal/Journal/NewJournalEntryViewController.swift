@@ -9,6 +9,7 @@
 import UIKit
 
 class NewJournalEntryViewController: UIViewController {
+    var journal: Journal?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,8 @@ class NewJournalEntryViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
+    @IBOutlet weak var journalEntryContents: UITextView!
+    
     /*
     // MARK: - Navigation
 

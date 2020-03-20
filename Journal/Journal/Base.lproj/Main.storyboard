@@ -31,6 +31,11 @@
                                                 <action selector="cancel:" destination="wzd-Vq-3Wy" id="EZA-Cz-d13"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="W7P-Ph-kb2">
+                                            <connections>
+                                                <segue destination="yW9-eB-oPm" kind="unwind" unwindAction="doneWithSegue:" id="F4g-rf-3yf"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -47,8 +52,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mtb-fR-sBj"/>
                     </view>
+                    <connections>
+                        <outlet property="journalEntryContents" destination="jP4-Xk-OhZ" id="HEd-90-CRd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tg-G6-anS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="yW9-eB-oPm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="779.71014492753625" y="906.69642857142856"/>
         </scene>
@@ -115,7 +124,7 @@
                     <navigationItem key="navigationItem" title="My Journal" id="iJ1-H6-YCi">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="KFu-B8-dgL">
                             <connections>
-                                <segue destination="wzd-Vq-3Wy" kind="presentation" id="AAc-sY-OH6"/>
+                                <segue destination="wzd-Vq-3Wy" kind="presentation" identifier="newJournalEntry" id="AAc-sY-OH6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

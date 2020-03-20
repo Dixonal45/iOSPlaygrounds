@@ -15,7 +15,7 @@ class JournalTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        for index in 0...1000 {
+        for index in 0...3 {
             journal.entries.append(JournalEntry(date: Date(), contents: "Contents for entry \(index)"))
         }
     }
@@ -51,6 +51,11 @@ class JournalTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func done(segue: UIStoryboardSegue) {
+        let newJournalEntry = segue.source as! NewJournalEntryViewController
+        journal.entries.append(JournalEntry(date: Date(), contents: newJournalEntry.journalEntryContents.text))
+        tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,16 +96,22 @@ class JournalTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    let newJournalEntrySegueIdentifier = "newJournalEntry"
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == journalEntrySegueIndentifier {
             if let journalEntryViewController = segue.destination as? JournalEntryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell), let entry = journal.entry(index: indexPath.row) {
                     journalEntryViewController.journalEntry = entry
-        }
+            } else if segue.identifier == newJournalEntrySegueIdentifier {
+                if let newJournalEntryViewController = segue.destination as? NewJournalEntryViewController {
+                    newJournalEntryViewController.journal = journal
+                }
+            }
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         }
+
     
 
 }
