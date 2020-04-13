@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		379BABCD243CB6C5009D61EF /* Time It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		379BABCD243CB6C5009D61EF /* Time It Version 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time It Version 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		379BABD0243CB6C5009D61EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379BABD2243CB6C5009D61EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		379BABD4243CB6C5009D61EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +44,10 @@
 		379BABD9243CB6CB009D61EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		379BABDC243CB6CB009D61EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		379BABDE243CB6CB009D61EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		379BABE3243CB6CB009D61EF /* Time ItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time ItTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		379BABE3243CB6CB009D61EF /* Time It Version 1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time It Version 1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		379BABE7243CB6CB009D61EF /* Time_ItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_ItTests.swift; sourceTree = "<group>"; };
 		379BABE9243CB6CB009D61EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		379BABEE243CB6CB009D61EF /* Time ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		379BABEE243CB6CB009D61EF /* Time It Version 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time It Version 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		379BABF2243CB6CB009D61EF /* Time_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_ItUITests.swift; sourceTree = "<group>"; };
 		379BABF4243CB6CB009D61EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		379BAC00243E1E7A009D61EF /* stopwatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stopwatchesViewController.swift; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		379BABCE243CB6C5009D61EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				379BABCD243CB6C5009D61EF /* Time It.app */,
-				379BABE3243CB6CB009D61EF /* Time ItTests.xctest */,
-				379BABEE243CB6CB009D61EF /* Time ItUITests.xctest */,
+				379BABCD243CB6C5009D61EF /* Time It Version 1.app */,
+				379BABE3243CB6CB009D61EF /* Time It Version 1Tests.xctest */,
+				379BABEE243CB6CB009D61EF /* Time It Version 1UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		379BABCC243CB6C5009D61EF /* Time It */ = {
+		379BABCC243CB6C5009D61EF /* Time It Version 1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 379BABF7243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time It" */;
+			buildConfigurationList = 379BABF7243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time It Version 1" */;
 			buildPhases = (
 				379BABC9243CB6C5009D61EF /* Sources */,
 				379BABCA243CB6C5009D61EF /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = "Time It";
+			name = "Time It Version 1";
 			productName = "Time It";
-			productReference = 379BABCD243CB6C5009D61EF /* Time It.app */;
+			productReference = 379BABCD243CB6C5009D61EF /* Time It Version 1.app */;
 			productType = "com.apple.product-type.application";
 		};
-		379BABE2243CB6CB009D61EF /* Time ItTests */ = {
+		379BABE2243CB6CB009D61EF /* Time It Version 1Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 379BABFA243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time ItTests" */;
+			buildConfigurationList = 379BABFA243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time It Version 1Tests" */;
 			buildPhases = (
 				379BABDF243CB6CB009D61EF /* Sources */,
 				379BABE0243CB6CB009D61EF /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				379BABE5243CB6CB009D61EF /* PBXTargetDependency */,
 			);
-			name = "Time ItTests";
+			name = "Time It Version 1Tests";
 			productName = "Time ItTests";
-			productReference = 379BABE3243CB6CB009D61EF /* Time ItTests.xctest */;
+			productReference = 379BABE3243CB6CB009D61EF /* Time It Version 1Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		379BABED243CB6CB009D61EF /* Time ItUITests */ = {
+		379BABED243CB6CB009D61EF /* Time It Version 1UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 379BABFD243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time ItUITests" */;
+			buildConfigurationList = 379BABFD243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time It Version 1UITests" */;
 			buildPhases = (
 				379BABEA243CB6CB009D61EF /* Sources */,
 				379BABEB243CB6CB009D61EF /* Frameworks */,
@@ -182,9 +182,9 @@
 			dependencies = (
 				379BABF0243CB6CB009D61EF /* PBXTargetDependency */,
 			);
-			name = "Time ItUITests";
+			name = "Time It Version 1UITests";
 			productName = "Time ItUITests";
-			productReference = 379BABEE243CB6CB009D61EF /* Time ItUITests.xctest */;
+			productReference = 379BABEE243CB6CB009D61EF /* Time It Version 1UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 379BABC8243CB6C4009D61EF /* Build configuration list for PBXProject "Time It" */;
+			buildConfigurationList = 379BABC8243CB6C4009D61EF /* Build configuration list for PBXProject "Time It Version 1" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,9 +223,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				379BABCC243CB6C5009D61EF /* Time It */,
-				379BABE2243CB6CB009D61EF /* Time ItTests */,
-				379BABED243CB6CB009D61EF /* Time ItUITests */,
+				379BABCC243CB6C5009D61EF /* Time It Version 1 */,
+				379BABE2243CB6CB009D61EF /* Time It Version 1Tests */,
+				379BABED243CB6CB009D61EF /* Time It Version 1UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,12 +290,12 @@
 /* Begin PBXTargetDependency section */
 		379BABE5243CB6CB009D61EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 379BABCC243CB6C5009D61EF /* Time It */;
+			target = 379BABCC243CB6C5009D61EF /* Time It Version 1 */;
 			targetProxy = 379BABE4243CB6CB009D61EF /* PBXContainerItemProxy */;
 		};
 		379BABF0243CB6CB009D61EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 379BABCC243CB6C5009D61EF /* Time It */;
+			target = 379BABCC243CB6C5009D61EF /* Time It Version 1 */;
 			targetProxy = 379BABEF243CB6CB009D61EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -485,7 +485,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Time It.app/Time It";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Time It Version 1.app/Time It Version 1";
 			};
 			name = Debug;
 		};
@@ -506,7 +506,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Time It.app/Time It";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Time It Version 1.app/Time It Version 1";
 			};
 			name = Release;
 		};
@@ -551,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		379BABC8243CB6C4009D61EF /* Build configuration list for PBXProject "Time It" */ = {
+		379BABC8243CB6C4009D61EF /* Build configuration list for PBXProject "Time It Version 1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				379BABF5243CB6CB009D61EF /* Debug */,
@@ -560,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		379BABF7243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time It" */ = {
+		379BABF7243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time It Version 1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				379BABF8243CB6CB009D61EF /* Debug */,
@@ -569,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		379BABFA243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time ItTests" */ = {
+		379BABFA243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time It Version 1Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				379BABFB243CB6CB009D61EF /* Debug */,
@@ -578,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		379BABFD243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time ItUITests" */ = {
+		379BABFD243CB6CB009D61EF /* Build configuration list for PBXNativeTarget "Time It Version 1UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				379BABFE243CB6CB009D61EF /* Debug */,
