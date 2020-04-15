@@ -16,6 +16,7 @@
 		379BAC332444E720009D61EF /* Time_It_Version_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BAC322444E720009D61EF /* Time_It_Version_2UITests.swift */; };
 		379BAC412444EA7F009D61EF /* TimersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BAC402444EA7F009D61EF /* TimersTableViewController.swift */; };
 		379BAC452444EDFD009D61EF /* TimerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BAC442444EDFD009D61EF /* TimerDetailTableViewController.swift */; };
+		379BAC4724473919009D61EF /* StopwatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BAC4624473919009D61EF /* StopwatchesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		379BAC342444E720009D61EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		379BAC402444EA7F009D61EF /* TimersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersTableViewController.swift; sourceTree = "<group>"; };
 		379BAC442444EDFD009D61EF /* TimerDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDetailTableViewController.swift; sourceTree = "<group>"; };
+		379BAC4624473919009D61EF /* StopwatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				379BAC102444E71E009D61EF /* AppDelegate.swift */,
 				379BAC122444E71E009D61EF /* SceneDelegate.swift */,
 				379BAC162444E71E009D61EF /* Main.storyboard */,
+				379BAC4624473919009D61EF /* StopwatchesTableViewController.swift */,
 				379BAC442444EDFD009D61EF /* TimerDetailTableViewController.swift */,
 				379BAC402444EA7F009D61EF /* TimersTableViewController.swift */,
 				379BAC192444E720009D61EF /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				379BAC112444E71E009D61EF /* AppDelegate.swift in Sources */,
 				379BAC132444E71E009D61EF /* SceneDelegate.swift in Sources */,
 				379BAC452444EDFD009D61EF /* TimerDetailTableViewController.swift in Sources */,
+				379BAC4724473919009D61EF /* StopwatchesTableViewController.swift in Sources */,
 				379BAC412444EA7F009D61EF /* TimersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

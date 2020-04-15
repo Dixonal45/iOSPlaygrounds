@@ -41,6 +41,81 @@
             </objects>
             <point key="canvasLocation" x="610" y="136"/>
         </scene>
+        <!--Stopwatches Table View Controller-->
+        <scene sceneID="hAB-eb-xg5">
+            <objects>
+                <tableViewController id="Lzq-5k-r0K" customClass="StopwatchesTableViewController" customModule="Time_It_Version_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kNe-fN-2AN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="92M-Er-djF">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Stopwatches" id="Un0-rd-zkf">
+                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="U7A-Bw-Pn7">
+                                        <connections>
+                                            <segue destination="NSP-Er-WpO" kind="presentation" id="Ozc-kd-d7D"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stopwatchCell" id="Lsb-oh-i6I">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lsb-oh-i6I" id="1X1-37-qLm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Lzq-5k-r0K" id="VlT-TL-qRL"/>
+                            <outlet property="delegate" destination="Lzq-5k-r0K" id="3V2-81-twF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNP-tX-Raj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="832"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="KYn-BA-S2c">
+            <objects>
+                <tableViewController id="NSP-Er-WpO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qqw-uj-CWH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="ldM-9O-5co">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Add Stopwatch" id="3tr-j5-x1m">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hj1-u1-WxF"/>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="done" id="hDY-kX-bWW"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <textField key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="par-kA-X5R">
+                            <rect key="frame" x="0.0" y="44" width="414" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <connections>
+                            <outlet property="dataSource" destination="NSP-Er-WpO" id="jNK-NM-wCR"/>
+                            <outlet property="delegate" destination="NSP-Er-WpO" id="Afx-in-BfY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWF-Q0-7Yb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="832"/>
+        </scene>
         <!--Timer Detail Table View Controller-->
         <scene sceneID="9eg-gd-YFH">
             <objects>
@@ -56,12 +131,12 @@
                                 <navigationItem title="Add Timer" id="KnL-Ec-qqI">
                                     <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PnA-6W-qOt">
                                         <connections>
-                                            <segue destination="nGA-MC-h15" kind="unwind" unwindAction="cancelWithSegue:" id="pMy-KE-Z0r"/>
+                                            <segue destination="nGA-MC-h15" kind="unwind" identifier="cancelSegue" unwindAction="cancelWithSegue:" id="pMy-KE-Z0r"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" systemItem="done" id="iGd-2Q-XwN">
                                         <connections>
-                                            <segue destination="nGA-MC-h15" kind="unwind" unwindAction="doneWithSegue:" id="89U-a1-oim"/>
+                                            <segue destination="nGA-MC-h15" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="89U-a1-oim"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>

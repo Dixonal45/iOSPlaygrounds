@@ -1,33 +1,19 @@
 //
-//  TimersTableViewController.swift
+//  StopwatchesTableViewController.swift
 //  Time It Version 2
 //
-//  Created by Allison Dixon on 4/13/20.
+//  Created by Allison Dixon on 4/15/20.
 //  Copyright © 2020 Allison Dixon. All rights reserved.
 //
 
 import UIKit
 
-class TimersTableViewController: UITableViewController {
-    var timers = [String]()
-    var newTimer: String = ""
+class StopwatchesTableViewController: UITableViewController {
+    var stopwathces = [String]()
+    var newStopwatch: String = ""
 
-    @IBAction func cancel(segue:UIStoryboardSegue){
-        
-    }
-    @IBAction func done(segue:UIStoryboardSegue){
-        let timerDetailTVC = segue.source as! TimerDetailTableViewController
-        newTimer = timerDetailTVC.name
-        
-        timers.append(newTimer)
-        tableView.reloadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        timers = []
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,24 +26,23 @@ class TimersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return timers.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = timers[indexPath.row]
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
