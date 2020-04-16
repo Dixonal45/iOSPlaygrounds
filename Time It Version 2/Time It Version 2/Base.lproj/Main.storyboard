@@ -3,20 +3,34 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Timers-->
+        <!--Timers Table View Controller-->
         <scene sceneID="Vdi-ge-UOw">
             <objects>
                 <tableViewController id="TYO-CW-XZO" customClass="TimersTableViewController" customModule="Time_It_Version_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="293-1i-Ne4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="kGI-VC-wPc">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Timers" id="DCZ-Jb-QIG">
+                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="ylU-e3-pmy">
+                                        <connections>
+                                            <segue destination="df6-QG-fRx" kind="presentation" id="d0R-MH-iyT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0zM-lf-gV8">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0zM-lf-gV8" id="PGq-dA-Lxr">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -29,24 +43,61 @@
                             <outlet property="delegate" destination="TYO-CW-XZO" id="ahb-ME-exi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Timers" id="RdR-ck-Zw7">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QjC-r0-ELE">
-                            <connections>
-                                <segue destination="df6-QG-fRx" kind="presentation" id="UhB-Dq-cpV"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOV-zC-3th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="610" y="136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f81-LT-zpT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GC-hz-SOm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="f1O-sn-t9A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x6F-io-uy0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time it background" translatesAutoresizingMaskIntoConstraints="NO" id="1aX-0K-pIf">
+                                <rect key="frame" x="-24" y="88" width="461" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld3-xR-9br">
+                                <rect key="frame" x="169" y="345" width="84" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Timers">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TYO-CW-XZO" kind="presentation" id="B7P-R0-R7f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5g-JQ-VMZ">
+                                <rect key="frame" x="130" y="427" width="161" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Stopwatches">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Lzq-5k-r0K" kind="presentation" id="mKH-bt-4GU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="F53-oe-2H8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TYp-nf-Sca"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-339.13043478260875" y="480.80357142857139"/>
         </scene>
         <!--Stopwatches Table View Controller-->
         <scene sceneID="hAB-eb-xg5">
             <objects>
                 <tableViewController id="Lzq-5k-r0K" customClass="StopwatchesTableViewController" customModule="Time_It_Version_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kNe-fN-2AN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="92M-Er-djF">
@@ -82,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="613" y="832"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Stopwatch Detail Table View Controller-->
         <scene sceneID="KYn-BA-S2c">
             <objects>
-                <tableViewController id="NSP-Er-WpO" sceneMemberID="viewController">
+                <tableViewController id="NSP-Er-WpO" customClass="StopwatchDetailTableViewController" customModule="Time_It_Version_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qqw-uj-CWH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,8 +146,16 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Add Stopwatch" id="3tr-j5-x1m">
-                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hj1-u1-WxF"/>
-                                    <barButtonItem key="rightBarButtonItem" systemItem="done" id="hDY-kX-bWW"/>
+                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hj1-u1-WxF">
+                                        <connections>
+                                            <segue destination="jlv-Y8-kZF" kind="unwind" identifier="cancelSegue" unwindAction="cancelWithSegue:" id="6hJ-dx-cli"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="done" id="hDY-kX-bWW">
+                                        <connections>
+                                            <segue destination="jlv-Y8-kZF" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="jQm-lt-WXb"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -111,8 +170,12 @@
                             <outlet property="delegate" destination="NSP-Er-WpO" id="Afx-in-BfY"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="stopwatchName" destination="par-kA-X5R" id="YAU-5K-oaV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWF-Q0-7Yb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jlv-Y8-kZF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1410" y="832"/>
         </scene>
@@ -165,18 +228,21 @@
         <!--Navigation Controller-->
         <scene sceneID="rie-Yv-9OK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BzG-PH-BIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="YZo-w0-Qmc" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DqL-vn-vjb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TYO-CW-XZO" kind="relationship" relationship="rootViewController" id="s6F-2y-cqa"/>
+                        <segue destination="f1O-sn-t9A" kind="relationship" relationship="rootViewController" id="Eih-uJ-QU6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BzG-PH-BIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-309" y="136"/>
+            <point key="canvasLocation" x="-1186" y="481"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="time it background" width="960" height="640"/>
+    </resources>
 </document>

@@ -1,33 +1,25 @@
 //
-//  StopwatchesTableViewController.swift
+//  StopwatchDetailTableViewController.swift
 //  Time It Version 2
 //
-//  Created by Allison Dixon on 4/15/20.
+//  Created by Allison Dixon on 4/16/20.
 //  Copyright © 2020 Allison Dixon. All rights reserved.
 //
 
 import UIKit
 
-class StopwatchesTableViewController: UITableViewController {
-    var stopwatches = [String]()
-    var newStopwatch: String = ""
-    
-    @IBAction func cancel(segue:UIStoryboardSegue){
-        
-    }
-    
-    @IBAction func done(segue:UIStoryboardSegue) {
-        let stopwatchDetailTVC = segue.source as! StopwatchDetailTableViewController
-        newStopwatch = stopwatchDetailTVC.name
-        
-        stopwatches.append(newStopwatch)
-        tableView.reloadData()
-    }
+class StopwatchDetailTableViewController: UITableViewController {
+    var name: String = ""
 
+    @IBOutlet weak var stopwatchName: UITextField!
+    @IBAction func cancel(segue:UIStoryboardSegue) {
+        
+    }
+    @IBAction func done(segue:UIStoryboardSegue) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        stopwatches = []
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,24 +32,29 @@ class StopwatchesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return stopwatches.count
+        return 0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "doneSegue" {
+            name = stopwatchName.text!
+        }
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stopwatchCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = stopwatches[indexPath.row]
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
