@@ -45,7 +45,7 @@ class StopwatchDetailTableViewController: UITableViewController {
             name = stopwatchName.text!
         }
     }
-
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
