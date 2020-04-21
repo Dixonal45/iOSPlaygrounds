@@ -11,6 +11,7 @@ import UIKit
 class TimerDetailTableViewController: UITableViewController {
     var name: String = ""
     @IBOutlet weak var timerName: UITextField!
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class TimerDetailTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
 
     // MARK: - Table view data source
 
