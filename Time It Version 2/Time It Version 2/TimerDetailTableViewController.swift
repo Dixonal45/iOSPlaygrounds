@@ -11,7 +11,13 @@ import UIKit
 class TimerDetailTableViewController: UITableViewController {
     var name: String = ""
     @IBOutlet weak var timerName: UITextField!
- 
+    
+    @IBAction func cancel(segue:UIStoryboardSegue) {
+           
+       }
+       @IBAction func done(segue:UIStoryboardSegue) {
+           
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()

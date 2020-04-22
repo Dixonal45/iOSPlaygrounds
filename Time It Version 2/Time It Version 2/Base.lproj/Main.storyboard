@@ -196,29 +196,32 @@
                                 <navigationItem title="Add Timer" id="KnL-Ec-qqI">
                                     <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PnA-6W-qOt">
                                         <connections>
-                                            <segue destination="nGA-MC-h15" kind="unwind" identifier="cancelSegue" unwindAction="cancelWithSegue:" id="pMy-KE-Z0r"/>
+                                            <segue destination="nGA-MC-h15" kind="unwind" identifier="cancelSegue" unwindAction="cancelWithSegue:" id="Tas-Qj-cFI"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" systemItem="done" id="iGd-2Q-XwN">
                                         <connections>
-                                            <segue destination="nGA-MC-h15" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="89U-a1-oim"/>
+                                            <segue destination="nGA-MC-h15" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="aib-Fl-Q5E"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
-                        <containerView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="719-RY-dgJ">
-                            <rect key="frame" x="0.0" y="44" width="414" height="249"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <connections>
-                                <segue destination="cOY-Cc-dl2" kind="embed" id="v9l-Xa-phN"/>
-                            </connections>
-                        </containerView>
+                        <textField key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="CiW-Ca-U0d" userLabel="Timer Name">
+                            <rect key="frame" x="0.0" y="44" width="414" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <connections>
                             <outlet property="dataSource" destination="df6-QG-fRx" id="zUF-ud-W1n"/>
                             <outlet property="delegate" destination="df6-QG-fRx" id="C8z-6r-7zZ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="timerContainerView" destination="TQS-6y-fK2" id="oU1-nc-oCh"/>
+                        <outlet property="timerName" destination="CiW-Ca-U0d" id="UV0-xe-p4a"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJa-Qa-nqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="nGA-MC-h15" userLabel="Exit" sceneMemberID="exit"/>
@@ -240,27 +243,6 @@
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="-1186" y="481"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fem-1T-0Lb">
-            <objects>
-                <viewController id="cOY-Cc-dl2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ko6-xe-olu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="249"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtB-wy-bct">
-                                <rect key="frame" x="88" y="96" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ePW-Rh-ReY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1455" y="-334"/>
         </scene>
     </scenes>
     <resources>
