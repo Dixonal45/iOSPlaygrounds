@@ -29,13 +29,32 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0zM-lf-gV8">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="46" id="0zM-lf-gV8">
+                                <rect key="frame" x="0.0" y="72" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0zM-lf-gV8" id="PGq-dA-Lxr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8c-wN-ti8">
+                                            <rect key="frame" x="324" y="4.5" width="41" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="play.circle" catalog="system"/>
+                                        </button>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3t4-dk-IML">
+                                            <rect key="frame" x="146" y="12" width="97" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdQ-UN-Opc">
+                                            <rect key="frame" x="367" y="5" width="41" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="pause.circle" catalog="system"/>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,12 +65,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOV-zC-3th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="136"/>
+            <point key="canvasLocation" x="608.69565217391312" y="135.9375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f81-LT-zpT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8GC-hz-SOm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="f1O-sn-t9A" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x6F-io-uy0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -91,6 +109,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="TYp-nf-Sca"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GC-hz-SOm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-339.13043478260875" y="480.80357142857139"/>
         </scene>
@@ -122,6 +141,18 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lsb-oh-i6I" id="1X1-37-qLm">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwP-sy-c2X">
+                                            <rect key="frame" x="367" y="3.5" width="41" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="pause.circle" catalog="system"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qII-Y1-xCI">
+                                            <rect key="frame" x="326" y="3.5" width="41" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="play.circle" catalog="system"/>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -133,7 +164,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNP-tX-Raj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="832"/>
+            <point key="canvasLocation" x="611.59420289855075" y="831.69642857142856"/>
         </scene>
         <!--Stopwatch Detail Table View Controller-->
         <scene sceneID="KYn-BA-S2c">
@@ -219,7 +250,6 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="timerContainerView" destination="TQS-6y-fK2" id="oU1-nc-oCh"/>
                         <outlet property="timerName" destination="CiW-Ca-U0d" id="UV0-xe-p4a"/>
                     </connections>
                 </tableViewController>
@@ -231,7 +261,6 @@
         <!--Navigation Controller-->
         <scene sceneID="rie-Yv-9OK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BzG-PH-BIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="YZo-w0-Qmc" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DqL-vn-vjb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -241,11 +270,14 @@
                         <segue destination="f1O-sn-t9A" kind="relationship" relationship="rootViewController" id="Eih-uJ-QU6"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BzG-PH-BIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1186" y="481"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pause.circle" catalog="system" width="64" height="60"/>
+        <image name="play.circle" catalog="system" width="64" height="60"/>
         <image name="time it background" width="960" height="640"/>
     </resources>
 </document>
