@@ -35,7 +35,6 @@ class StopwatchesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
 
     // MARK: - Table view data source
 
@@ -69,7 +68,12 @@ class StopwatchesTableViewController: UITableViewController {
         blurView.frame = imageView.bounds
         imageView.addSubview(blurView)
     }
-    
+//    override func tableView(_tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.row == 0 {
+//            return 80
+//        }
+//        return UITableView.automaticDimension
+//    }
 
     /*
     // Override to support conditional editing of the table view.
