@@ -11,30 +11,7 @@ import UIKit
 class StopwatchesTableViewController: UITableViewController {
     var stopwatches = [String]()
     var newStopwatch: String = ""
-    var counter = 0.0
-    var timer = Timer()
-    var isPlaying = false
-    
-    @IBOutlet weak var pauseButton: UIButton!
-    @IBOutlet weak var startButton: UIButton!
-    @IBAction func startTimer(_ sender: Any) {
-        if(isPlaying) {
-            return
-        }
-        startButton.isEnabled = false
-        pauseButton.isEnabled = true
-            
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
-        isPlaying = true
-    }
-    @IBAction func pauseTimer(_ sender: Any) {
-        startButton.isEnabled = true
-        pauseButton.isEnabled = false
-            
-        timer.invalidate()
-        isPlaying = false
-    }
-    @IBOutlet weak var timeLabel: UILabel!
+
     @IBAction func cancel(segue:UIStoryboardSegue){
         
     }
@@ -52,20 +29,7 @@ class StopwatchesTableViewController: UITableViewController {
         
         
         stopwatches = []
-        timeLabel.text = String(counter)
-        pauseButton.isEnabled = false
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    @objc func UpdateTimer() {
-        counter = counter + 0.1
-        timeLabel.text = String(format: "%.1f", counter)
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

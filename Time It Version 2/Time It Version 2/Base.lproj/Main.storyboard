@@ -146,17 +146,11 @@
                                             <rect key="frame" x="367" y="3.5" width="41" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="pause.circle" catalog="system"/>
-                                            <connections>
-                                                <action selector="pauseTimer:" destination="Lzq-5k-r0K" eventType="touchUpInside" id="x0T-8O-fVr"/>
-                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qII-Y1-xCI">
                                             <rect key="frame" x="326" y="3.5" width="41" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="play.circle" catalog="system"/>
-                                            <connections>
-                                                <action selector="startTimer:" destination="Lzq-5k-r0K" eventType="touchUpInside" id="67E-Uk-adE"/>
-                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiV-uO-dO9">
                                             <rect key="frame" x="185" y="13" width="103" height="25"/>
@@ -174,11 +168,6 @@
                             <outlet property="delegate" destination="Lzq-5k-r0K" id="3V2-81-twF"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="pauseButton" destination="pwP-sy-c2X" id="ITl-sZ-ulP"/>
-                        <outlet property="startButton" destination="qII-Y1-xCI" id="4YL-qs-v9Z"/>
-                        <outlet property="timeLabel" destination="AiV-uO-dO9" id="BvN-P5-LcA"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNP-tX-Raj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
