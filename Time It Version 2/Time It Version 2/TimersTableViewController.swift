@@ -11,6 +11,26 @@ import UIKit
 class TimersTableViewController: UITableViewController {
     var timers = [String]()
     var newTimer: String = ""
+    
+    
+    
+    // start code I added for timer
+    // https://medium.com/@connor.b645/swift-cell-based-countdown-timers-c43ef5391c3
+    
+    var timer: Timer?
+    var countdownTimers: [(id: Int,
+                           createdAt: TimeInterval,
+                           duration: TimeInterval)] = {
+    return [
+    (0, Date().timeIntervalSince1970, 5),
+    (1, Date().timeIntervalSince1970, 10),
+    (2, Date().timeIntervalSince1970, 15),
+    (3, Date().timeIntervalSince1970, 86400)
+    ]
+    }()
+    // end code I added for timer
+    
+    
 
     @IBAction func cancel(segue:UIStoryboardSegue){
         
@@ -42,6 +62,49 @@ class TimersTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    
+    
+    // start code added for timer
+    func calculateTimeRemaining(countdownTimer:(index: Int,
+                                                createdAt: TimeInterval,
+                                                duration: TimeInterval))
+    -> Double {
+    return Double((countdownTimer.createdAt + countdownTimer.duration) - Date().timeIntervalSince1970)
+    }
+    
+    func timeRemainingFormatted() -> String {
+        let duration = TimeInterval(self)
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [ .hour, .minute, .second ]
+        formatter.zeroFormattingBehavior = [ .pad ]
+        return formatter.string(from: duration) ?? ""
+    }
+    func configureCell(withCountdownTimer countdownTimer: ( index: Int,
+                       createdAt: TimeInterval,
+                       duration: TimeInterval)) {
+      let timeRemaining = self.calculateTimeRemaining(countdownTimer:
+        countdownTimer)
+      self.timerLabel.text = "\(timeRemaining.timeRemainingFormatted())"
+      if self.timer == nil {
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats:
+                                          true) { timer in
+          let newTime = self.calculateTimeRemaining(countdownTimer:
+          countdownTimer)
+          if newTime <= 0 {
+        
+           self.countdownCompleteDelegate?.countdownHasFinished(atIndex:
+           countdownTimer.index)
+          
+          } else {
+            self.timerLabel.text = newTime.timeRemainingFormatted()
+          }
+        }
+      }
+    }
+    // end code i added for timer
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
