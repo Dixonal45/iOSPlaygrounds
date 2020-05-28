@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time it background" translatesAutoresizingMaskIntoConstraints="NO" id="1aX-0K-pIf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld3-xR-9br">
                                 <rect key="frame" x="153" y="364" width="109" height="48"/>
@@ -107,8 +107,8 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1aX-0K-pIf" secondAttribute="trailing" id="BU1-6J-fkX"/>
                             <constraint firstItem="1aX-0K-pIf" firstAttribute="top" secondItem="x6F-io-uy0" secondAttribute="top" id="Ms1-1G-XJR"/>
-                            <constraint firstItem="1aX-0K-pIf" firstAttribute="leading" secondItem="x6F-io-uy0" secondAttribute="leading" id="SFP-53-fAi"/>
-                            <constraint firstAttribute="bottom" secondItem="1aX-0K-pIf" secondAttribute="bottom" id="iVz-8D-HF9"/>
+                            <constraint firstItem="1aX-0K-pIf" firstAttribute="leading" secondItem="F53-oe-2H8" secondAttribute="leading" id="SFP-53-fAi"/>
+                            <constraint firstAttribute="bottom" secondItem="1aX-0K-pIf" secondAttribute="bottom" constant="20" symbolic="YES" id="iVz-8D-HF9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F53-oe-2H8"/>
                     </view>

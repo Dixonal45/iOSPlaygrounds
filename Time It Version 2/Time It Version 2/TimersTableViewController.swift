@@ -12,23 +12,36 @@ class TimersTableViewController: UITableViewController {
     var timers = [String]()
     var newTimer: String = ""
     
-    
+
     
     // start code I added for timer
     // https://medium.com/@connor.b645/swift-cell-based-countdown-timers-c43ef5391c3
     
-    var timer: Timer?
-    var countdownTimers: [(id: Int,
-                           createdAt: TimeInterval,
-                           duration: TimeInterval)] = {
-    return [
-    (0, Date().timeIntervalSince1970, 5),
-    (1, Date().timeIntervalSince1970, 10),
-    (2, Date().timeIntervalSince1970, 15),
-    (3, Date().timeIntervalSince1970, 86400)
-    ]
-    }()
+//    var timer: Timer?
+//    var countdownTimers: [(id: Int,
+//                           createdAt: TimeInterval,
+//                           duration: TimeInterval)] = {
+//    return [
+//    (0, Date().timeIntervalSince1970, 5),
+//    (1, Date().timeIntervalSince1970, 10),
+//    (2, Date().timeIntervalSince1970, 15),
+//    (3, Date().timeIntervalSince1970, 86400)
+//    ]
+//    }()
     // end code I added for timer
+    
+    // code #2 I just added to test
+    let formatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.zeroFormattingBehavior = .pad
+        formatter.allowedUnits = [.hour, .minute, .second]
+        return formatter
+    }()
+
+    var timers = [TimerModel](repeating:TimerModel(), count:30)
+//
+//    // end code #2 I just added to test
+
     
     
 
@@ -66,44 +79,103 @@ class TimersTableViewController: UITableViewController {
     
     
     // start code added for timer
-    func calculateTimeRemaining(countdownTimer:(index: Int,
-                                                createdAt: TimeInterval,
-                                                duration: TimeInterval))
-    -> Double {
-    return Double((countdownTimer.createdAt + countdownTimer.duration) - Date().timeIntervalSince1970)
-    }
-    
-    func timeRemainingFormatted() -> String {
-        let duration = TimeInterval(self)
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .positional
-        formatter.allowedUnits = [ .hour, .minute, .second ]
-        formatter.zeroFormattingBehavior = [ .pad ]
-        return formatter.string(from: duration) ?? ""
-    }
-    func configureCell(withCountdownTimer countdownTimer: ( index: Int,
-                       createdAt: TimeInterval,
-                       duration: TimeInterval)) {
-      let timeRemaining = self.calculateTimeRemaining(countdownTimer:
-        countdownTimer)
-      self.timerLabel.text = "\(timeRemaining.timeRemainingFormatted())"
-      if self.timer == nil {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats:
-                                          true) { timer in
-          let newTime = self.calculateTimeRemaining(countdownTimer:
-          countdownTimer)
-          if newTime <= 0 {
-        
-           self.countdownCompleteDelegate?.countdownHasFinished(atIndex:
-           countdownTimer.index)
-          
-          } else {
-            self.timerLabel.text = newTime.timeRemainingFormatted()
-          }
-        }
-      }
-    }
+//    func calculateTimeRemaining(countdownTimer:(index: Int,
+//        createdAt: TimeInterval, duration: TimeInterval))
+//    -> Double {
+//    return Double((countdownTimer.createdAt + countdownTimer.duration) - Date().timeIntervalSince1970)
+//    }
+//    
+//    func timeRemainingFormatted() -> String {
+//        let duration = TimeInterval(self)
+//        let formatter = DateComponentsFormatter()
+//        formatter.unitsStyle = .positional
+//        formatter.allowedUnits = [ .hour, .minute, .second ]
+//        formatter.zeroFormattingBehavior = [ .pad ]
+//        return formatter.string(from: duration) ?? ""
+//    }
+//    func configureCell(withCountdownTimer countdownTimer: ( index: Int,
+//                       createdAt: TimeInterval,
+//                       duration: TimeInterval)) {
+//      let timeRemaining = self.calculateTimeRemaining(countdownTimer:
+//        countdownTimer)
+//      self.timerLabel.text = "\(timeRemaining.timeRemainingFormatted())"
+//      if self.timer == nil {
+//        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats:
+//                                          true) { timer in
+//          let newTime = self.calculateTimeRemaining(countdownTimer:
+//          countdownTimer)
+//          if newTime <= 0 {
+//        
+//            self.countdownCompleteDelegate.countdownHasFinished(atIndex:
+//           countdownTimer.index)
+//          
+//          } else {
+//            self.timerLabel.text = newTime.timeRemainingFormatted()
+//          }
+//        }
+//      }
+//    }
     // end code i added for timer
+    
+    
+    // start code #2 I just added to test
+//
+    override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+
+        func elapsedTimeSince(_ startTime: Date) -> String {
+            let elapsed = -startTime.timeIntervalSinceNow
+
+            return self.formatter.string(from: elapsed) ?? "0:00:00"
+        }
+
+        func startTimer() {
+            self.timersActive += 1
+            guard self.timer == nil else {
+                return
+            }
+
+            self.timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { [weak self] (timer) in
+               if let me = self {
+                for indexPath in me.tableview.indexPathsForVisibleRows ?? [] {
+                    let timer = me.timers[indexPath.row]
+                    if timer.isRunning {
+                        if let cell = me.tableview.cellForRow(at: indexPath) {
+                            cell.textLabel?.text = me.formatter.string(from: timer.elapsed) ?? "0:00:00"
+                        }
+                    }
+                }
+               }
+            })
+        }
+
+        func stopTimer() {
+            self.timersActive -= 1
+            if self.timersActive == 0 {
+                self.timer?.invalidate()
+                self.timer = nil
+            }
+        }
+
+    }
+
+    extension ViewController: UITableViewDelegate {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            self.timers[indexPath.row].isRunning = !self.timers[indexPath.row].isRunning
+            self.tableview.reloadRows(at: [indexPath], with: .none)
+            if self.timers[indexPath.row].isRunning {
+                self.startTimer()
+            } else {
+                self.stopTimer()
+            }
+        }
+    }
+    // end of code #2 I just added to test
+    
+    
+    
     
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -125,6 +197,11 @@ class TimersTableViewController: UITableViewController {
         // Configure the cell...
         cell.textLabel?.text = timers[indexPath.row]
 
+        // #2 code added testing
+//        cell.imageView?.image = timer.isRunning ? #imageLiteral(resourceName: "GreenDot") : #imageLiteral(resourceName: "RedDot")
+//        cell.textLabel?.text = self.formatter.string(from: timer.elapsed) ?? "0:00:00"
+        // end #2 code added testing
+        
         return cell
     }
     override func viewWillAppear(_ animated: Bool) {
