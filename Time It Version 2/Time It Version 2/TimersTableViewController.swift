@@ -31,14 +31,14 @@ class TimersTableViewController: UITableViewController {
     // end code I added for timer
     
     // code #2 I just added to test
-    let formatter: DateComponentsFormatter = {
-        let formatter = DateComponentsFormatter()
-        formatter.zeroFormattingBehavior = .pad
-        formatter.allowedUnits = [.hour, .minute, .second]
-        return formatter
-    }()
-
-    var timers = [TimerModel](repeating:TimerModel(), count:30)
+//    let formatter: DateComponentsFormatter = {
+//        let formatter = DateComponentsFormatter()
+//        formatter.zeroFormattingBehavior = .pad
+//        formatter.allowedUnits = [.hour, .minute, .second]
+//        return formatter
+//    }()
+//
+//    var timers = [TimerModel](repeating:TimerModel(), count:30)
 //
 //    // end code #2 I just added to test
 
@@ -120,58 +120,58 @@ class TimersTableViewController: UITableViewController {
     
     // start code #2 I just added to test
 //
-    override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-        }
-
-        func elapsedTimeSince(_ startTime: Date) -> String {
-            let elapsed = -startTime.timeIntervalSinceNow
-
-            return self.formatter.string(from: elapsed) ?? "0:00:00"
-        }
-
-        func startTimer() {
-            self.timersActive += 1
-            guard self.timer == nil else {
-                return
-            }
-
-            self.timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { [weak self] (timer) in
-               if let me = self {
-                for indexPath in me.tableview.indexPathsForVisibleRows ?? [] {
-                    let timer = me.timers[indexPath.row]
-                    if timer.isRunning {
-                        if let cell = me.tableview.cellForRow(at: indexPath) {
-                            cell.textLabel?.text = me.formatter.string(from: timer.elapsed) ?? "0:00:00"
-                        }
-                    }
-                }
-               }
-            })
-        }
-
-        func stopTimer() {
-            self.timersActive -= 1
-            if self.timersActive == 0 {
-                self.timer?.invalidate()
-                self.timer = nil
-            }
-        }
-
-    }
-
-    extension ViewController: UITableViewDelegate {
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            self.timers[indexPath.row].isRunning = !self.timers[indexPath.row].isRunning
-            self.tableview.reloadRows(at: [indexPath], with: .none)
-            if self.timers[indexPath.row].isRunning {
-                self.startTimer()
-            } else {
-                self.stopTimer()
-            }
-        }
-    }
+//    override func didReceiveMemoryWarning() {
+//            super.didReceiveMemoryWarning()
+//            // Dispose of any resources that can be recreated.
+//        }
+//
+//        func elapsedTimeSince(_ startTime: Date) -> String {
+//            let elapsed = -startTime.timeIntervalSinceNow
+//
+//            return self.formatter.string(from: elapsed) ?? "0:00:00"
+//        }
+//
+//        func startTimer() {
+//            self.timersActive += 1
+//            guard self.timer == nil else {
+//                return
+//            }
+//
+//            self.timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { [weak self] (timer) in
+//               if let me = self {
+//                for indexPath in me.tableview.indexPathsForVisibleRows ?? [] {
+//                    let timer = me.timers[indexPath.row]
+//                    if timer.isRunning {
+//                        if let cell = me.tableview.cellForRow(at: indexPath) {
+//                            cell.textLabel?.text = me.formatter.string(from: timer.elapsed) ?? "0:00:00"
+//                        }
+//                    }
+//                }
+//               }
+//            })
+//        }
+//
+//        func stopTimer() {
+//            self.timersActive -= 1
+//            if self.timersActive == 0 {
+//                self.timer?.invalidate()
+//                self.timer = nil
+//            }
+//        }
+//
+//    }
+//
+//    extension ViewController: UITableViewDelegate {
+//        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            self.timers[indexPath.row].isRunning = !self.timers[indexPath.row].isRunning
+//            self.tableview.reloadRows(at: [indexPath], with: .none)
+//            if self.timers[indexPath.row].isRunning {
+//                self.startTimer()
+//            } else {
+//                self.stopTimer()
+//            }
+//        }
+//    }
     // end of code #2 I just added to test
     
     

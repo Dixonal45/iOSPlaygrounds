@@ -47,7 +47,7 @@
                                             <state key="normal" backgroundImage="play.circle" catalog="system"/>
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3t4-dk-IML">
-                                            <rect key="frame" x="20" y="42" width="374" height="34"/>
+                                            <rect key="frame" x="156" y="11" width="114" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -140,11 +140,11 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stopwatchCell" rowHeight="82" id="Lsb-oh-i6I">
-                                <rect key="frame" x="0.0" y="72" width="414" height="82"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stopwatchCell" rowHeight="58" id="Lsb-oh-i6I" customClass="stopwatchTableViewCell" customModule="Time_It_Version_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lsb-oh-i6I" id="1X1-37-qLm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lsb-oh-i6I" id="1X1-37-qLm" customClass="stopwatchTableViewCell" customModule="Time_It_Version_2" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwP-sy-c2X">
@@ -166,6 +166,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="stopwatchLabel" destination="AiV-uO-dO9" id="FC1-l3-qoY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
