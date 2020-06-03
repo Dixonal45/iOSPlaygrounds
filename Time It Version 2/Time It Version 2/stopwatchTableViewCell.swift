@@ -16,20 +16,23 @@ class stopwatchTableViewCell: UITableViewCell {
     var timer = Timer()
     var isPlaying = false
 
-    @IBOutlet weak var stopwatchLabel: UILabel!
-//    @IBOutlet weak var stopwatchStartButton: UIButton!
-    @IBOutlet weak var stopwatchPauseButton: UIButton!
     
-    @IBAction func pauseStopwatch(_ sender: Any) {
-    }
+    @IBOutlet weak var stopwatchLabel: UILabel!
+    
+    @IBOutlet weak var stopwatchStartButton: UIButton!
+    @IBOutlet weak var stopwatchPauseButton: UIButton!
     @IBAction func startStopwatch(_ sender: Any) {
     }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        stopwatchLabel.text = String(counter)
-        stopwatchPauseButton.isEnabled = false
+    @IBAction func pauseStopwatch(_ sender: Any) {
     }
+
+//    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//        stopwatchLabel.text = String(counter)
+//        stopwatchPauseButton.isEnabled = false
+//    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

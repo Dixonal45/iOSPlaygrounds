@@ -12,12 +12,6 @@ class StopwatchesTableViewController: UITableViewController {
     var stopwatches = [String]()
     var newStopwatch: String = ""
     
-    @IBOutlet weak var stopwatchStartButton: UIButton!
-    
-    @IBOutlet weak var stopwatchPauseButton: UIButton!
-    
-    @IBOutlet weak var stopwatchLabel: UILabel!
-    
     
     @IBAction func cancel(segue:UIStoryboardSegue){
         

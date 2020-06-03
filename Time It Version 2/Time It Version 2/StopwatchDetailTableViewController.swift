@@ -41,9 +41,7 @@ class StopwatchDetailTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "doneSegue" {
             name = stopwatchName.text!
-        }
     }
     
     /*
