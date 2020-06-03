@@ -152,7 +152,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="pause.circle" catalog="system"/>
                                             <connections>
-                                                <action selector="pauseStopwatch:" destination="Lsb-oh-i6I" eventType="touchUpInside" id="5FP-Xr-RwY"/>
+                                                <action selector="pauseTimer:" destination="Lsb-oh-i6I" eventType="touchUpInside" id="Odr-Ve-9Aa"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qII-Y1-xCI">
@@ -160,7 +160,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="play.circle" catalog="system"/>
                                             <connections>
-                                                <action selector="startStopwatch:" destination="Lsb-oh-i6I" eventType="touchUpInside" id="21b-w4-12f"/>
+                                                <action selector="startTimer:" destination="Lsb-oh-i6I" eventType="touchUpInside" id="fzJ-5o-Cs0"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiV-uO-dO9">

@@ -21,10 +21,6 @@ class stopwatchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var stopwatchStartButton: UIButton!
     @IBOutlet weak var stopwatchPauseButton: UIButton!
-    @IBAction func startStopwatch(_ sender: Any) {
-    }
-    @IBAction func pauseStopwatch(_ sender: Any) {
-    }
 
 //    }
 //    override func awakeFromNib() {
