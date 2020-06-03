@@ -176,6 +176,11 @@
                             <outlet property="delegate" destination="Lzq-5k-r0K" id="3V2-81-twF"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="stopwatchLabel" destination="AiV-uO-dO9" id="FE9-sq-7pl"/>
+                        <outlet property="stopwatchPauseButton" destination="pwP-sy-c2X" id="mIo-YT-xqm"/>
+                        <outlet property="stopwatchStartButton" destination="qII-Y1-xCI" id="dyY-Pb-oRc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNP-tX-Raj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,12 +10,14 @@ import UIKit
 
 class stopwatchTableViewCell: UITableViewCell {
     
+    // https://www.ioscreator.com/tutorials/stopwatch-tutorial
+    
     var counter = 0.0
     var timer = Timer()
     var isPlaying = false
 
     @IBOutlet weak var stopwatchLabel: UILabel!
-    @IBOutlet weak var stopwatchStartButton: UIButton!
+//    @IBOutlet weak var stopwatchStartButton: UIButton!
     @IBOutlet weak var stopwatchPauseButton: UIButton!
     
     @IBAction func pauseStopwatch(_ sender: Any) {
