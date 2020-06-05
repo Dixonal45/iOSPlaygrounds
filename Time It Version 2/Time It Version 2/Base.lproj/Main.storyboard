@@ -76,39 +76,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time it background" translatesAutoresizingMaskIntoConstraints="NO" id="1aX-0K-pIf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld3-xR-9br">
-                                <rect key="frame" x="153" y="364" width="109" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.13430267627284478" green="0.0097850767580362763" blue="0.32769996761658027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title=" Timers ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="TYO-CW-XZO" kind="presentation" id="B7P-R0-R7f"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5g-JQ-VMZ">
-                                <rect key="frame" x="108" y="479" width="198" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.12082832880793762" green="0.0074191933697231333" blue="0.29628805051813467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title=" Stopwatches ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Lzq-5k-r0K" kind="presentation" id="mKH-bt-4GU"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="eM3-yq-bsw">
+                                <rect key="frame" x="108" y="371" width="198" height="154"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld3-xR-9br">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="48"/>
+                                        <color key="backgroundColor" red="0.13430267627284478" green="0.0097850767580362763" blue="0.32769996761658027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title=" Timers ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="TYO-CW-XZO" kind="presentation" id="B7P-R0-R7f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5g-JQ-VMZ">
+                                        <rect key="frame" x="0.0" y="106" width="198" height="48"/>
+                                        <color key="backgroundColor" red="0.12082832880793762" green="0.0074191933697231333" blue="0.29628805051813467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title=" Stopwatches ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Lzq-5k-r0K" kind="presentation" id="mKH-bt-4GU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1aX-0K-pIf" secondAttribute="trailing" id="BU1-6J-fkX"/>
                             <constraint firstItem="1aX-0K-pIf" firstAttribute="top" secondItem="x6F-io-uy0" secondAttribute="top" id="Ms1-1G-XJR"/>
-                            <constraint firstItem="1aX-0K-pIf" firstAttribute="leading" secondItem="F53-oe-2H8" secondAttribute="leading" id="SFP-53-fAi"/>
-                            <constraint firstAttribute="bottom" secondItem="1aX-0K-pIf" secondAttribute="bottom" constant="20" symbolic="YES" id="iVz-8D-HF9"/>
+                            <constraint firstItem="1aX-0K-pIf" firstAttribute="leading" secondItem="x6F-io-uy0" secondAttribute="leading" id="SFP-53-fAi"/>
+                            <constraint firstItem="eM3-yq-bsw" firstAttribute="centerY" secondItem="x6F-io-uy0" secondAttribute="centerY" id="d12-Al-rOA"/>
+                            <constraint firstAttribute="bottom" secondItem="1aX-0K-pIf" secondAttribute="bottom" id="iVz-8D-HF9"/>
+                            <constraint firstItem="eM3-yq-bsw" firstAttribute="centerX" secondItem="x6F-io-uy0" secondAttribute="centerX" id="rm1-Su-5YH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F53-oe-2H8"/>
                     </view>
@@ -152,7 +157,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="pause.circle" catalog="system"/>
                                             <connections>
-                                                <action selector="pauseTimer:" destination="Lsb-oh-i6I" eventType="touchUpInside" id="Odr-Ve-9Aa"/>
+                                                <action selector="pauseTimer:" destination="Lsb-oh-i6I" eventType="touchUpInside" id="XdM-Sk-AYx"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qII-Y1-xCI">
@@ -160,7 +165,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="play.circle" catalog="system"/>
                                             <connections>
-                                                <action selector="startTimer:" destination="Lsb-oh-i6I" eventType="touchUpInside" id="fzJ-5o-Cs0"/>
+                                                <action selector="startTimer:" destination="Lsb-oh-i6I" eventType="touchUpInside" id="MXJ-af-QJd"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiV-uO-dO9">

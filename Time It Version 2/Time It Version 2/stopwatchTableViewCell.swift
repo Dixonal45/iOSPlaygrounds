@@ -22,7 +22,8 @@ class stopwatchTableViewCell: UITableViewCell {
     @IBOutlet weak var stopwatchStartButton: UIButton!
     @IBOutlet weak var stopwatchPauseButton: UIButton!
 
-//    }
+
+    //    }
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code
