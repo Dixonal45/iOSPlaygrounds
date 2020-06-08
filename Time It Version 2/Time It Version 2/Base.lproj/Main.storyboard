@@ -29,22 +29,28 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="87" id="0zM-lf-gV8">
-                                <rect key="frame" x="0.0" y="72" width="414" height="87"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="58" id="0zM-lf-gV8" customClass="timerTableViewCell" customModule="Time_It_Version_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0zM-lf-gV8" id="PGq-dA-Lxr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdQ-UN-Opc">
                                             <rect key="frame" x="367" y="5" width="41" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="pause.circle" catalog="system"/>
+                                            <connections>
+                                                <action selector="pauseTimer:" destination="0zM-lf-gV8" eventType="touchUpInside" id="TvY-MF-w3x"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8c-wN-ti8">
                                             <rect key="frame" x="324" y="4.5" width="41" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" backgroundImage="play.circle" catalog="system"/>
+                                            <connections>
+                                                <action selector="startTimer:" destination="0zM-lf-gV8" eventType="touchUpInside" id="gFV-2K-V6q"/>
+                                            </connections>
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3t4-dk-IML">
                                             <rect key="frame" x="156" y="11" width="114" height="34"/>
@@ -55,6 +61,11 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <connections>
+                                    <outlet property="timerPauseButton" destination="jdQ-UN-Opc" id="d49-CM-Sqk"/>
+                                    <outlet property="timerStartButton" destination="V8c-wN-ti8" id="FEO-xc-7mJ"/>
+                                    <outlet property="timerTextField" destination="3t4-dk-IML" id="zw3-H9-Fao"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

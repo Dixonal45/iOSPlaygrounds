@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373E915F248544E000D2F413 /* stopwatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E915E248544E000D2F413 /* stopwatchTableViewCell.swift */; };
+		373E9161248E796600D2F413 /* timerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E9160248E796600D2F413 /* timerTableViewCell.swift */; };
 		379BAC112444E71E009D61EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BAC102444E71E009D61EF /* AppDelegate.swift */; };
 		379BAC132444E71E009D61EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BAC122444E71E009D61EF /* SceneDelegate.swift */; };
 		379BAC182444E71E009D61EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379BAC162444E71E009D61EF /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		373E915E248544E000D2F413 /* stopwatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stopwatchTableViewCell.swift; sourceTree = "<group>"; };
+		373E9160248E796600D2F413 /* timerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerTableViewCell.swift; sourceTree = "<group>"; };
 		379BAC0D2444E71E009D61EF /* Time It Version 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time It Version 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		379BAC102444E71E009D61EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379BAC122444E71E009D61EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				373E915E248544E000D2F413 /* stopwatchTableViewCell.swift */,
 				379BAC122444E71E009D61EF /* SceneDelegate.swift */,
 				379BAC162444E71E009D61EF /* Main.storyboard */,
+				373E9160248E796600D2F413 /* timerTableViewCell.swift */,
 				379BAC4624473919009D61EF /* StopwatchesTableViewController.swift */,
 				379BAC48244892F1009D61EF /* StopwatchDetailTableViewController.swift */,
 				379BAC442444EDFD009D61EF /* TimerDetailTableViewController.swift */,
@@ -278,6 +281,7 @@
 				379BAC4724473919009D61EF /* StopwatchesTableViewController.swift in Sources */,
 				379BAC412444EA7F009D61EF /* TimersTableViewController.swift in Sources */,
 				373E915F248544E000D2F413 /* stopwatchTableViewCell.swift in Sources */,
+				373E9161248E796600D2F413 /* timerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
