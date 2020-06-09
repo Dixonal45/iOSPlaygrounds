@@ -10,14 +10,13 @@ import UIKit
 
 class timerTableViewCell: UITableViewCell {
 
-    var counter = 0.0
+//    var counter = 0.0
     var timer = Timer()
     var isPlaying = false
     
     @IBOutlet weak var timerStartButton: UIButton!
     @IBOutlet weak var timerPauseButton: UIButton!
     @IBOutlet weak var timerTextField: UITextField!
-    
     
     
 //    override func awakeFromNib() {
@@ -47,9 +46,11 @@ class timerTableViewCell: UITableViewCell {
         timer.invalidate()
         isPlaying = false
     }
+
     @objc func UpdateTimer() {
-        counter = counter - 0.1
-        timerTextField.text = String(format: "%.1f", counter)
+        timerTextField.text = String(format: "%.1f")
+        timerTextField.text = timerTextField.text - 0.1
+//        timerTextField.text = String(format: "%.1f", counter)
     }
 
 }
