@@ -7,22 +7,30 @@
 //
 
 import UIKit
+import AVFoundation
 
 class timerTableViewCell: UITableViewCell {
 
-//    var counter = 0.0
     var timer = Timer()
     var isPlaying = false
+    var counter = Double()
     
     @IBOutlet weak var timerStartButton: UIButton!
     @IBOutlet weak var timerPauseButton: UIButton!
     @IBOutlet weak var timerTextField: UITextField!
+    
+    var timerValue: Double? {
+        get {
+            return Double(timerTextField.text!)
+        }
+    }
     
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code
 //    }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -46,11 +54,15 @@ class timerTableViewCell: UITableViewCell {
         timer.invalidate()
         isPlaying = false
     }
-
+    
+    
     @objc func UpdateTimer() {
-        timerTextField.text = String(format: "%.1f")
-        timerTextField.text = timerTextField.text - 0.1
-//        timerTextField.text = String(format: "%.1f", counter)
+        if timerValue! > 0 {
+            counter = timerValue!
+            counter -= 0.1
+            timerTextField.text = String(format: "%.1f", counter)
+            }
+
     }
 
 }
